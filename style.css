@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background: #666;
+  transition: left 0.3s;
+  padding-top: 50px;
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: #666;
+  color: white;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menu-toggle:hover + .sidebar,
+.sidebar:hover {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 20px;
+  display: block;
+}
+
+.sidebar ul li a::before {
+  content: "◆ ";
+  color: orange;
+}
+
+.sidebar ul li a:hover {
+  color: #ffd700;
+}
